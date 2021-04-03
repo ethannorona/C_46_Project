@@ -60,10 +60,13 @@ function draw() {
 	}
 
 	if(playerHealth === 1){
+		plrHealthB1.visible = false;
 		plrHealthB2.visible = false;
 	}
 
 	if(playerHealth === 0){
+		plrHealthB1.visible = false;
+		plrHealthB2.visible = false;
 		plrHealthB3.visible = false;
 		gameState = "end0";
 	}
@@ -73,10 +76,13 @@ function draw() {
 	}
 
 	if(enemyHealth === 1){
+		emyHealthB1.visible = false;
 		emyHealthB2.visible = false;
 	}
 
 	if(enemyHealth === 0){
+		emyHealthB1.visible = false;
+		emyHealthB2.visible = false;
 		emyHealthB3.visible = false;
 		gameState = "end1";
 	}
