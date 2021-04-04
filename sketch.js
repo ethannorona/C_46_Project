@@ -246,6 +246,10 @@ function keyPressed(){
 	if(keyDown("n") && player.isTouching(dodgeball1)){
 		dodgeball1.x = player.x;
 		dodgeball1.y = player.y - 30;
+		if(dodgeball1.isTouching(dodgeball2)){
+			dodgeball1.x -= 30;
+			dodgeball2.x += 30;
+		}
 		if(keyDown("m")){
 			dodgeball1.velocityY = -22;
 		}
@@ -254,6 +258,10 @@ function keyPressed(){
 	if(keyDown("n") && player.isTouching(dodgeball2)){
 		dodgeball2.x = player.x;
 		dodgeball2.y = player.y - 30;
+		if(dodgeball1.isTouching(dodgeball2)){
+			dodgeball1.x -= 30;
+			dodgeball2.x += 30;
+		}
 		if(keyDown("m")){
 			dodgeball2.velocityY = -22;
 		}
@@ -262,6 +270,10 @@ function keyPressed(){
 	if(keyDown("c") && enemy.isTouching(dodgeball1)){
 		dodgeball1.x = enemy.x;
 		dodgeball1.y = enemy.y + 30;
+		if(dodgeball1.isTouching(dodgeball2)){
+			dodgeball1.x -= 30;
+			dodgeball2.x += 30;
+		}
 		if(keyDown("v")){
 			dodgeball1.velocityY = 22;
 		}
@@ -270,6 +282,10 @@ function keyPressed(){
 	if(keyDown("c") && enemy.isTouching(dodgeball2)){
 		dodgeball2.x = enemy.x;
 		dodgeball2.y = enemy.y + 30;
+		if(dodgeball1.isTouching(dodgeball2)){
+			dodgeball1.x -= 30;
+			dodgeball2.x += 30;
+		}
 		if(keyDown("v")){
 			dodgeball2.velocityY = 22;
 		}
